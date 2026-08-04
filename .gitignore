@@ -1,0 +1,35 @@
+#ignore files without extensions
+# Ignore all
+*
+# Unignore all with extensions
+!*.*
+# Unignore all dirs
+!*/
+
+# Compiled python modules.
+*.pyc
+*.pkl
+*.csv
+
+# Pycharms .idea can be ignored
+/.idea
+
+#ipnyb checkpoints
+/code/.ipynb*
+.DS_Store
+
+/huxt.egg-info
+
+# Numba cache
+__pycache__/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE and temporary files
+.vscode/
+.venv/
+.pytest_cache/
+.coverage
