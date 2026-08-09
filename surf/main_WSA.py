@@ -97,11 +97,11 @@ crlist['earth_lat'] = crlist['Time_21.5'].apply(lambda dt: get_earth_lat(dt))
 
 #===============================================================================
 
-durations = np.arange(1.0, 30.5, 0.5)  # CME durations in hours
+durations = np.arange(1.0, 30.5, 0.1)  # CME durations in hours
 rmin = 21.5*u.solRad
 rmax = 230*u.solRad #outer boundary for HUXt runs
 dt_scale = 4
-simtime = 28.0 * u.day
+simtime = 27.0 * u.day
 
 # <codecell> Functions for spheroidal and fixed duration ConeCMEs
 def spheroidal(onecme,model):

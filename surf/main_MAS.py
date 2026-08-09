@@ -171,11 +171,11 @@ arrival_speed.append(['Velocity'] + list(crlist['CME_V']))
 transit_time.append(['Observed'] + list(crlist['tt_21']))
 arrival_speed.append(['Observed'] + list(crlist['V_max']))
 
-durations = np.arange(1.0, 30.5, 0.5)  # CME durations in hours
+durations = np.arange(1.0, 30.5, 0.1)  # CME durations in hours
 rmin = 21.5*u.solRad
 rmax = 230*u.solRad #outer boundary for HUXt runs
 dt_scale = 4
-simtime = 28.0 * u.day
+simtime = 27.0 * u.day
 
 # Pre-initialize rows
 sph_tt_row = ['Spheroidal']
