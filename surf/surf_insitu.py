@@ -1164,7 +1164,7 @@ def omniSURF_forecast(ftime, simtime=27.27*u.day,
                       cr_num=cr, cr_lon_init=cr_lon_init,
                       simtime=simtime, r_min=rmin, r_max=rmax, 
                       dt_scale=dt_scale, latitude=Elat, frame='synodic', 
-                      track_cmes=False, lon_out=0*u.rad, solver=solver)
+                      track_cmes=True, lon_out=0*u.rad, solver=solver)
     return model
 
 
