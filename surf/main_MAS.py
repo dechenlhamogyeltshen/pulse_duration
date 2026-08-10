@@ -84,7 +84,7 @@ for column in date_columns:
     crlist[column] = crlist[column].apply(lambda x: convert_to_datetime(x) if isinstance(x, str) else None)
 
 # compute 21.5-215 transit time
-crlist['tt_21'] = np.nan 
+# crlist['tt_21'] = np.nan 
 for irow in range(0, len(crlist)):
     crlist.loc[irow,'tt_21'] = crlist.loc[irow,'Disturbance_Time'] - crlist.loc[irow,'Time_21.5']
 # Convert  from timedelta to days
