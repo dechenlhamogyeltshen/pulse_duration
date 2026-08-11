@@ -200,7 +200,7 @@ for _, onecme in crlist.iterrows():
     
     model = surfIS.omniSURF_forecast(ftime,
                                            rmin=rmin, rmax=rmax,
-                                           dt_scale=4, dt=1*u.day,
+                                           dt_scale=4,
                                            run_2d=False,
                                            solver='huxt')
     
