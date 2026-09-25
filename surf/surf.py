@@ -415,14 +415,15 @@ class ConeCME:
         times = Time([coord['time'] for i, coord in self.coords.items()])
 
         is_scalar = np.ndim(longitude) & np.ndim(radius)  # np.iscalar doesnt work on quantities
-        if not is_scalar:
+        #if not is_scalar:
             # If not scalar, must have coords for each time step.
-            match_len = (longitude.size == radius.size) & (longitude.size == times.size)
-            if not match_len:
-                raise ValueError('longitude and radius must be single values or be arrays of length equal to the number'
-                                 ' of time steps')
+            #match_len = (longitude.size == radius.size) & (longitude.size == times.size)
+            #if not match_len:
+                #raise ValueError('longitude and radius must be single values or be arrays of length equal to the number'
+                                 #' of time steps')
 
-        if is_scalar == 1:
+        #if is_scalar == 1:
+        if is_scalar == 0:
             arrive_rad = np.ones(times.size) * radius
             arrive_lon = np.ones(times.size) * longitude
 

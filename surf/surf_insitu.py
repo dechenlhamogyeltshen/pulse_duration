@@ -990,7 +990,7 @@ def correct_inner_vlon_cnn_onnx(v_inner_array,
 def omniSURF_forecast(ftime, simtime=27.27*u.day, 
                         rmin=21.5*u.solRad, rmax=230*u.solRad, 
                         dt_scale=4,
-                        omni_input=None, buffertime=5*u.day,
+                        omni_input=None, buffertime=0*u.day,
                         run_2d=False, solver='huxt',
                         rho_source='speed', temp_source='speed'):
     """
@@ -1422,7 +1422,7 @@ def omniSURF_reconstruction(start_time, end_time,
             dt_scale=dt_scale,
             latitude=Elat,
             frame='synodic',
-            solver=solver, track_cmes=False
+            solver=solver, track_cmes=True
         )
     else:
         model = surfIN.set_time_dependent_boundary(
