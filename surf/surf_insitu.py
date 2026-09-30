@@ -990,7 +990,7 @@ def correct_inner_vlon_cnn_onnx(v_inner_array,
 def omniSURF_forecast(ftime, simtime=27.27*u.day, 
                         rmin=21.5*u.solRad, rmax=230*u.solRad, 
                         dt_scale=4,
-                        omni_input=None, buffertime=0*u.day,
+                        omni_input=None, buffertime=5*u.day,
                         run_2d=False, solver='huxt',
                         rho_source='speed', temp_source='speed'):
     """

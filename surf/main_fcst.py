@@ -111,7 +111,7 @@ rmax = 230*u.solRad #outer boundary for HUXt runs
 def spheroidal(onecme,model):
     '''Solve HUXt using a spheroidal cone CME'''
     
-    cme = surf.ConeCME(t_launch=0.0 * u.day,
+    cme = surf.ConeCME(t_launch=5.0 * u.day,
                     longitude=onecme['lon'] * u.deg,
                     latitude=onecme['lat'] * u.deg,
                     initial_height=rmin,
@@ -140,7 +140,7 @@ def spheroidal(onecme,model):
 def fixed_duration(onecme,model,duration,rmin=rmin):
     '''Solve HUXt using a fixed pulse duration cone CME'''
     
-    cme = surf.ConeCME(t_launch=0.0 * u.day,
+    cme = surf.ConeCME(t_launch=5.0 * u.day,
                     longitude=onecme['lon'] * u.deg,
                     latitude=onecme['lat'] * u.deg,
                     initial_height=rmin,
